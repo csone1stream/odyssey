@@ -53,7 +53,7 @@ int od_prom_switch_server_on(od_prom_metrics_t *self)
 	int flags = MHD_USE_AUTO_INTERNAL_THREAD;
 
 	if (system_supports_ipv6()) {
-		flags |= MHD_USE_DUAL_STACK;
+		flags = MHD_USE_DUAL_STACK;
 	}
 
 	self->http_server = promhttp_start_daemon(
