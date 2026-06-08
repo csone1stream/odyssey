@@ -1,17 +1,7 @@
 name: Build with prometheus
 on:
   push:
-    branches: [ master ]
   pull_request:
-    branches: [ master ]
-    paths:
-      - "sources/**"
-      - "test/**"
-      - "CMakeLists.txt"
-      - "docker/**"
-      - "modules/**"
-      - "cmake/**"
-      - "!docker/prom-exporter/**"
 jobs:
   prom:
     name: prom
